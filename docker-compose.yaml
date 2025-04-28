@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  node_server:
+    build:
+      context: .
+    ports:
+      - "1480:1480"
+    restart: always

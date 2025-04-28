@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Умный список задач</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <main>
+    <div class="header-actions">
+      <h1>Мои задачи</h1>
+      <button class="theme-toggle" aria-label="Переключить тему">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Добавить новую задачу..." required />
+      <button type="submit"><i class="fas fa-plus"></i> Добавить</button>
+    </form>
+
+    <div id="filters">
+      <button data-filter="all" class="active">Все</button>
+      <button data-filter="active" class="active">Активные</button>
+      <button data-filter="completed" class="active">Завершённые</button>
+    </div>
+
+    <ul id="task-list"></ul>
+
+    <button id="enable-notifications">
+      <i class="fas fa-bell"></i> Уведомления
+    </button>
+  </main>
+
+
+  <script src="db.js"></script>
+  <script src="notification.js"></script>
+  <script src="theme.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
