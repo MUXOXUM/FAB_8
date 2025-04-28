@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-const PORT = 1482;
+const PORT = 1480;
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('*', (req, res) => {
